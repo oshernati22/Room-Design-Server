@@ -5,6 +5,8 @@ const resolvers = require("./furniture/resolvers");
 const mongoose = require("mongoose");
 require("dotenv").config();
 
+const PORT = process.env.PORT || 3000;
+
 async function startServer() {
   const app = express();
   const apolloServer = new ApolloServer({
@@ -23,7 +25,7 @@ async function startServer() {
     useNewUrlParser: true,
   });
   console.log("Mongoose is connected 🦆");
-  app.listen(3000, () => console.log("server is running on port 4000"));
+  app.listen(PORT, () => console.log("server is running on port 4000"));
 }
 
 startServer();
