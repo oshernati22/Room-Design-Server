@@ -23,7 +23,7 @@ async function startServer() {
     useNewUrlParser: true,
   });
   console.log("Mongoose is connected 🦆");
-  app.listen(process.env.PORT, () =>
+  app.listen(process.env.PORT || 3000, () =>
     console.log("server is running on port 4000")
   );
 }
