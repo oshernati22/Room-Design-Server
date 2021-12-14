@@ -1,20 +1,21 @@
 const mongoose = require("mongoose");
 
-const FurnitureSechma = new mongoose.Schema({
+const DesignerSechma = new mongoose.Schema({
   title: {
     type: String,
     required: true,
   },
   description: {
     type: String,
+    required: true,
   },
   url: {
     type: String,
   },
-  price: {
+  photo: {
     type: String,
   },
 });
 
-const Furniture = mongoose.model("furniture", FurnitureSechma);
-module.exports = Furniture;
+const Designer = mongoose.model("designer", DesignerSechma);
+module.exports = Designer;
