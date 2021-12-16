@@ -8,7 +8,7 @@ const FurnitureSechma = new mongoose.Schema({
   description: {
     type: String,
   },
-  type: {
+  category: {
     type: String,
   },
   designer: {
