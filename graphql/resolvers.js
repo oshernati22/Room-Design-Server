@@ -11,8 +11,8 @@ const resolvers = {
     getAllDesigners: async () => {
       return await Designer.find();
     },
-    getDesigner: async (parent, { id }, context, info) => {
-      return await Designer.findById(id);
+    getDesigner: async (parent, { title }, context, info) => {
+      return await Designer.findOne({ title: title });
     },
   },
   Mutation: {

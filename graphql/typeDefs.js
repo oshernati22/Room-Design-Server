@@ -22,7 +22,7 @@ const typeDefs = gql`
     getAllFurnitures: [Furniture]
     getFurniture(id: ID): Furniture
     getAllDesigners: [Designer]
-    getDesigner(id: ID): Designer
+    getDesigner(title: String): Designer
   }
   input FurnitureInput {
     title: String
